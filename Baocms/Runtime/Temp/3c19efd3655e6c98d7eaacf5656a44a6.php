@@ -1,0 +1,3 @@
+<?php
+//000000007200a:2:{i:0;a:11:{s:5:"ad_id";s:1:"4";s:7:"site_id";s:2:"39";s:7:"city_id";s:1:"5";s:5:"title";s:5:"test1";s:8:"link_url";s:0:"";s:5:"photo";s:28:"2016/11/14/58297ced2d714.jpg";s:4:"code";s:0:"";s:7:"bg_date";s:10:"2016-11-13";s:8:"end_date";s:10:"2018-11-15";s:6:"closed";s:1:"0";s:7:"orderby";s:1:"0";}i:1;a:11:{s:5:"ad_id";s:1:"5";s:7:"site_id";s:2:"39";s:7:"city_id";s:1:"5";s:5:"title";s:5:"test2";s:8:"link_url";s:0:"";s:5:"photo";s:28:"2016/11/14/58297d13da6fd.jpg";s:4:"code";s:0:"";s:7:"bg_date";s:10:"2016-11-06";s:8:"end_date";s:10:"2019-11-15";s:6:"closed";s:1:"0";s:7:"orderby";s:1:"0";}}
+?>

@@ -1,0 +1,613 @@
+{set:
+	$seo_data=array();
+	$site_config=new Config('site_config');
+	$seo_data['title']=$name."_".$site_config->name;
+	$seo_data['keywords']=$keywords;
+	$seo_data['description']=$description;
+	seo::set($seo_data);
+}
+{js:artTemplate}
+{js:cookie}
+<link rel="stylesheet" type="text/css" href="{skin:css/swiper.min.css}" />
+<script type="text/javascript" src="{theme:javascript/swiper.min.js}"></script>
+<link rel="stylesheet" href="{skin:css/products.css}" />
+<section>
+    <!--货品ID，当为商品时值为空-->
+    <input type='hidden' id='product_id' alt='货品ID' value='' />
+    <!--商品相册 开始-->
+    <section class="banner container-full swiper-container">
+        <div class="swiper-wrapper">
+            {foreach:items=$photo}
+            <div class="swiper-slide"><img src="{url:/pic/thumb/img/$item[img]/w/350/h/350}" class="img-responsive" alt=""></div>
+            {/foreach}
+        </div>
+        <div class="swiper-pagination"></div>
+    </section>
+    <!--商品相册 结束-->
+    <!--商品信息 开始-->
+    <div class="pro-info">
+        <div class="info">
+            <!--团购-->
+            {if:$promo == 'groupon'} {if:isset($regiment) && $regiment}
+            <!--团购正常-->
+            <h6>
+					<span class="bold red2">团购价：</span><b style="color:#f60004"><span class="red2">￥</span>{$regiment['regiment_price']}</b>
+					{set:$item=Api::run('getRegimentRowById',array('#id#',$active_id))}
+					{set:$free_time = ITime::getDiffSec($item['end_time']);}
+					<span class="time" id="promotionb">还剩 <i class="bold red2" id='cd_hour_promotionb'>{echo:floor($free_time/3600);}</i>小时<i class="bold red2" id='cd_minute_promotionb'>{echo:floor(($free_time%3600)/60);}</i>分<i class="bold red2" id='cd_second_promotionb'>{echo:$free_time%60;}</i>秒结束</span>
+				</h6>
+            <h6>
+					销售价：<span style="text-decoration:line-through">￥{$item['sell_price']} </span>
+					立省：￥{echo:abs($sell_price-$regiment['regiment_price'])}
+				</h6>
+            <h6>销售数量：{$item['sum_count']}件</h6>
+            <h6 style="margin-bottom:0">限购量：{$item['limit_min_count']} 至 {$item['limit_max_count']}</h6> {else:}
+            <!--团购过期-->
+            <h6><span class="f30"><img src="{skin:images/front/group_expir.png}" style="float:right;" name="timeover" /></span></h6>
+            <h6 style="margin-bottom:0">销售价：<b class="price red2"><span class="f30">{if:$minSellPrice != $maxSellPrice}￥{$minSellPrice} - ￥{$maxSellPrice}{else:}￥{$sell_price}{/if}</span></b></h6> {/if} {/if} {if:$promo == ''}
+            <span name="priceLi" class="text">{价格}</span> {/if}
+        </div>
+        <div class="info">
+            <a href="{url:/site/pro_detail/id/$id}">
+                <span class="text">商品详情</span>
+                <i class="fa fa-chevron-right"></i>
+            </a>
+        </div>
+        <p class="pro-name">
+            <a href="{url:/site/pro_detail/id/$id}"><strong>{$name}</strong></a>
+        </p>
+        {if:isset($seller)}
+        <div class="secton10 secton10-v1">
+            <div class="info">
+                <a href="{url:/site/home/id/$seller_id}">
+                    <span class="text left">商家名称</span>
+                    <span class="text-fr right">{$seller['true_name']}</span>
+                </a>
+                <span class="icon-arr"></span>
+            </div>
+            <div class="info1">
+                <a href="{url:/site/home/id/$seller_id}">
+                    <span class="text left">所在地</span>
+                    <span class="text-fr right">
+	       				{echo:join(' ',area::name($seller['province'],$seller['city'],$seller['area']))}
+	   				</span>
+                </a>
+                <span class="icon-arr"></span>
+            </div>
+            <div class="tbl-type">
+                <span class="tbl-cell"></span>
+            </div>
+        </div>
+        <div class="secton10 secton10-v1">
+            <div class="info">
+                <a style="border-bottom: none" href="javascript:window.location.href='tel:{$seller['phone']}';">
+                    <span class="text left">联系电话:</span>
+                    <span class="text-fr right">
+	       				{$seller['phone']}
+	   				</span>
+                </a>
+                <span class="icon-arr"></span>
+            </div>
+        </div>
+        {/if}
+        <div class="secton10 secton10-v1">
+              <div class="info">
+                <a>
+                    <span class="text left">商品编号:</span>
+                    <span class="text-fr right"  id="data_goodsNo">
+	       				{echo:$goods_no?$goods_no:$id}
+	   				</span>
+                </a>
+                <span class="icon-arr"></span>
+            </div>
+            <div class="info">
+                <a>
+                    <span class="text left">库 存:</span>
+                    <span class="text-fr right">
+	       				{$store_nums}
+	   				</span>
+                </a>
+                <span class="icon-arr"></span>
+            </div>
+            <li class="relative" style="z-index:2;background:#fff;padding:13px 30px 12px 10px;list-style-type:none">至
+                <a class="sel_area blue" href="javascript:;">所在地区</a>：
+                <span id="deliveInfo"></span>
+                <div class="area_box disnone">
+                    <ul>
+                        <li><a data-code="1" href="#J_PostageTableCont"><strong>全部</strong></a></li>
+                        {foreach:items=Api::run('getAreasListTop')}
+                        <li><a href="javascript:delivery('{$item['area_id']}','{$item['area_name']}')">{$item['area_name']}</a></li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </li>
+            <!--配送方式的模板-->
+            <script type='text/html' id='deliveInfoTemplate'>
+                <%if(if_delivery == 0){%>
+                    <%=name%>：<b class="orange"><%=price%></b>（
+                        <%=description%>） &nbsp;&nbsp;
+                            <%}else{%>
+                                <%=name%>：<b class="orange">该地区无法送达</b> &nbsp;&nbsp;
+                                    <%}%>
+            </script>
+            <div class="info">
+                <a href="{url:/site/comments_list/id/$id}">
+                    <span class="text left">评 价:</span>
+                    <span class="text-fr right">{$comments} 次</span>
+                </a>
+                <span class="icon-arr"></span>
+            </div>
+            <div class="info">
+                <a>
+                    <span class="text left">浏览:</span>
+                    <span class="text-fr right">
+	       				{$visit} 次
+	   				</span>
+                </a>
+                <span class="icon-arr"></span>
+            </div>
+            <div class="info">
+            <a onclick="favorite_add(this);" href="javascript:void(0)">
+                <span class="text">收藏此商品</span>         
+            </a>
+        </div>
+            <div class="info">
+                <a>
+                    <span class="text left">重 量:</span>
+                    <span class="text-fr right">
+					{$weight}g
+					</span>
+                </a>
+                <span class="icon-arr"></span>
+            </div>
+            <div class="info1">
+                <a>
+                    <span class="text left">销 量:</span>
+                    <span class="text-fr right">{$sale} 件</span>
+                </a>
+                <span class="icon-arr"></span>
+            </div>
+            <div class="tbl-type">
+                <span class="tbl-cell"></span>
+            </div>
+        </div>
+        {if:$store_nums > 0} {if:$spec_array} {set:$specArray = JSON::decode($spec_array);} {foreach:items=$specArray}
+        <div class="col-lg-12 col-xs-12  bgf ">
+            <div class="pro-item1" style="float:left" name="specCols">
+                <span class="name">{$item['name']}：</span>
+                <span  class="value" id="specList{$item['id']}">
+					{set:$specVal=explode(',',trim($item['value'],','))}
+					{foreach:items=$specVal item=$spec_value}
+					{if:$item['type'] == 1}
+					<a class="spec-value" href="javascript:void(0);" onclick="sele_spec(this);" value='{"id":"{$item['id']}","type":"{$item['type']}","value":"{$spec_value}","name":"{$item['name']}"}' >{$spec_value} <span></span></a>
+                {else:}
+                <a class="spec-value" href="javascript:void(0);" onclick="sele_spec(this);" value='{"id":"{$item['id']}","type":"{$item['type ']}","value":"{$spec_value}","name":"{$item['name ']}"}'><img style="margin-top:-5px" src="{webroot:$spec_value}" width='30px' height='30px' /><span></span></a>
+                {/if} {/foreach}
+                </span>
+            </div>
+        </div>
+        {/foreach} {/if} {if:isset($seller)}
+        <div class="pd10">
+            <button onclick="javascript:window.location.href='tel:{$seller['phone']}';" type="button" class='btn fa fa-phone' style="width:100%">&nbsp;&nbsp;联系客服</button>
+        </div>
+        {/if}
+        <div class="col-lg-12 col-xs-12   bgf pd10">
+            <div class="pro-item">
+                <span class="value">
+				<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<button onclick="modified(-1);" class='btn btn-xs btn-block btn-danger ' onclick="buy_now();" >-</button>
+				</div>
+				<div class="left">
+					<input type='text' class='form-control'  style="text-align: center;height:31px;width:55px" id="buyNums" onblur="checkBuyNums();" value="1" />
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<button onclick="modified(1);" class='btn btn-xs btn-block btn-danger ' onclick="buy_now();" >+</button>
+				</div>
+				</span>
+            </div>
+        </div>
+        <div class="fixed col-lg-12 col-xs-12 ">
+            <div class="row">
+                <div class="btn-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    {if:$promo == 'groupon'}
+                    <button class='btn btn-xs btn-primary col-lg-12 col-xs-12' onclick="buy_now();">立即购买</button>
+                    {/if} {if:$promo == ''}
+                    <button class='btn btn-xs btn-primary col-lg-6 col-xs-6' onclick="window.location.href='{url:/simple/cart}';">我的购物车</button>
+                    <button class='btn btn-xs btn-danger col-lg-6 col-xs-6' onclick="joinCart();">加入购物车</button>
+                    {/if}
+                </div>
+            </div>
+        </div>
+        {else:}
+        <div class="pro-item">
+            <span class="name">&nbsp;</span>
+            <span class="value red">该商品已经售罄</span>
+        </div>
+        {/if}
+    </div>
+    <!--商品信息 结束-->
+</section>
+
+
+<!--商品价格模板-->
+<script type='text/html' id='priceTemplate'>
+<%if(group_price){%>
+<strong id='priceLi' name='priceLi' style="padding:0">
+	<span  id="real_price">￥<%=group_price%></span>
+</strong>
+<%}else{%>
+<strong  id='priceLi' name='priceLi' style="padding:0"><span id="real_price"><%if(minSellPrice != maxSellPrice){%>￥<%=minSellPrice%> - ￥<%=maxSellPrice%><%}else{%>￥<%=sell_price%><%}%></span></strong>
+<%}%>
+</script>
+
+<script type="text/javascript">
+$(function(){
+
+deliveryProvince = 0;
+deliveryProvinceString = '';
+
+
+	//开启倒计时功能
+	var cd_timer = new countdown();
+
+	//限时抢购倒计时
+	{if:isset($promotion)}
+	cd_timer.add('promotiona');
+	{/if}
+
+	//团购倒计时
+	{if:isset($regiment)}
+	cd_timer.add('promotionb');
+	{/if}
+
+	//获取地址的ip地址
+	getAddress();
+
+	//生成商品价格
+	var priceHtml = template.render('priceTemplate',{"group_price":"{$group_price}","minSellPrice":"{$minSellPrice}","maxSellPrice":"{$maxSellPrice}","sell_price":"{$sell_price}"});
+	$('[name="priceLi"]').replaceWith(priceHtml);
+})
+
+/**
+ * 规格的选择
+ * @param _self 规格本身
+ */
+function sele_spec(_self)
+{
+	var specObj = $.parseJSON($(_self).attr('value'));
+
+	//已经为选中状态时
+	if($(_self).attr('class') == 'current')
+	{
+		$(_self).removeClass('current');
+	}
+	else
+	{
+		//清除同行中其余规格选中状态
+		$('#specList'+specObj.id).find('a.current').removeClass('current');
+		$(_self).addClass('current');
+	}
+
+	//检查规格是否选择符合标准
+	if(checkSpecSelected())
+	{
+		//整理规格值
+		var specArray = [];
+		$('[name="specCols"]').each(function(){
+			specArray.push($(this).find('a.current').attr('value'));
+		});
+		var specJSON = '['+specArray.join(",")+']';
+
+		//获取货品数据并进行渲染
+		$.getJSON('{url:/site/getProduct}',{"goods_id":"{$id}","specJSON":specJSON,"random":Math.random},function(json){
+			if(json.flag == 'success')
+			{
+				var priceHtml = template.render('priceTemplate',json.data);
+				$('[name="priceLi"]').replaceWith(priceHtml);
+
+				//普通货品数据渲染
+				$('#data_goodsNo').text(json.data.products_no);
+				$('#data_storeNums').text(json.data.store_nums);
+				$('#data_marketPrice').text("￥"+json.data.market_price);
+				$('#data_weight').text(json.data.weight);
+				$('#product_id').val(json.data.id);
+
+				//库存监测
+				checkStoreNums();
+			}
+			else
+			{
+				alert(json.message);
+				closeBuy();
+			}
+		});
+	}
+}
+
+//禁止购买
+function closeBuy()
+{
+	if($('#buyNowButton').length > 0)
+	{
+		$('#buyNowButton').attr('disabled','disabled');
+		$('#buyNowButton').addClass('disabled');
+	}
+
+	if($('#joinCarButton').length > 0)
+	{
+		$('#joinCarButton').attr('disabled','disabled');
+		$('#joinCarButton').addClass('disabled');
+	}
+}
+
+//开放购买
+function openBuy()
+{
+	if($('#buyNowButton').length > 0)
+	{
+		$('#buyNowButton').removeAttr('disabled');
+		$('#buyNowButton').removeClass('disabled');
+	}
+
+	if($('#joinCarButton').length > 0)
+	{
+		$('#joinCarButton').removeAttr('disabled');
+		$('#joinCarButton').removeClass('disabled');
+	}
+}
+
+/**
+ * 监测库存操作
+ */
+function checkStoreNums()
+{
+	var storeNums = parseInt($.trim($('#data_storeNums').text()));
+	if(storeNums > 0)
+	{
+		openBuy();
+	}
+	else
+	{
+		closeBuy();
+	}
+}
+
+/**
+ * 检查规格选择是否符合标准
+ * @return boolen
+ */
+function checkSpecSelected()
+{
+	if($('[name="specCols"]').length === $('[name="specCols"] .current').length)
+	{
+		return true;
+	}
+	return false;
+}
+
+//检查购买数量是否合法
+function checkBuyNums()
+{
+	//购买数量小于0
+	var buyNums = parseInt($.trim($('#buyNums').val()));
+	if(isNaN(buyNums) || buyNums <= 0)
+	{
+		$('#buyNums').val(1);
+		return;
+	}
+
+	//购买数量大于库存
+	var storeNums = parseInt($.trim($('#data_storeNums').text()));
+	if(buyNums >= storeNums)
+	{
+		$('#buyNums').val(storeNums);
+		return;
+	}
+
+	//运费查询
+	delivery(deliveryProvince,deliveryProvinceString);
+}
+
+/**
+ * 购物车数量的加减
+ * @param code 增加或者减少购买的商品数量
+ */
+function modified(code)
+{
+	var buyNums = parseInt($.trim($('#buyNums').val()));
+	switch(code)
+	{
+		case 1:
+		{
+			buyNums++;
+		}
+		break;
+
+		case -1:
+		{
+			buyNums--;
+		}
+		break;
+	}
+
+	$('#buyNums').val(buyNums);
+	checkBuyNums();
+}
+
+//商品加入购物车
+function joinCart()
+{
+	if(!checkSpecSelected())
+	{
+		tips('请先选择商品的规格');
+		return;
+	}
+
+	var buyNums   = parseInt($.trim($('#buyNums').val()));
+	var price     = parseFloat($.trim($('#real_price').text()));
+	var productId = $('#product_id').val();
+	var type      = productId ? 'product' : 'goods';
+	var goods_id  = (type == 'product') ? productId : {$id};
+
+	$.getJSON('{url:/simple/joinCart}',{"goods_id":goods_id,"type":type,"goods_num":buyNums,"random":Math.random},function(content){
+		if(content.isError == false)
+		{
+			//获取购物车信息
+			$.getJSON('{url:/simple/showCart}',{"random":Math.random},function(json)
+			{
+				tips('加入成功');
+			});
+		}
+		else
+		{
+			tips(content.message);
+		}
+	});
+}
+
+//添加收藏夹
+function favorite_add(obj)
+{
+	{if:isset($this->user['user_id'])}
+		$.getJSON('{url:/simple/favorite_add}',{'goods_id':{$id},'random':Math.random},function(content)
+		{
+			if(content.isError == false)
+			{
+				$(obj).text(content.message);
+			}
+			else
+			{
+				alert(content.message);
+			}
+		});
+	{else:}
+		window.location.href="{url:/simple/login/?callback=/site/products/id/$id}";
+	{/if}
+}
+
+//立即购买按钮
+function buy_now()
+{
+	//对规格的检查
+	if(!checkSpecSelected())
+	{
+		tips('请选择商品的规格');
+		return;
+	}
+
+	//设置必要参数
+	var buyNums  = parseInt($.trim($('#buyNums').val()));
+	var id = {$id};
+	var type = 'goods';
+
+	if($('#product_id').val())
+	{
+		id = $('#product_id').val();
+		type = 'product';
+	}
+
+	{if:$promo}
+	//有促销活动（团购，抢购）
+	var url = '{url:/simple/cart2/id/@id@/num/@buyNums@/type/@type@/promo/$promo/active_id/$active_id}';
+	url = url.replace('@id@',id).replace('@buyNums@',buyNums).replace('@type@',type);
+	{else:}
+	//普通购买
+	var url = '{url:/simple/cart2/id/@id@/num/@buyNums@/type/@type@}';
+	url = url.replace('@id@',id).replace('@buyNums@',buyNums).replace('@type@',type);
+	{/if}
+
+	//页面跳转
+	window.location.href = url;
+}
+
+
+//加载根据地域获取城市
+function getAddress()
+{
+	//根据IP查询所在地
+	var ipAddress = $.cookie('ipAddress');
+	if(ipAddress)
+	{
+		searchDelivery(ipAddress);
+	}
+	else
+	{
+		$.getScript('http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js',function(){
+			ipAddress = remote_ip_info['province'];
+			$.cookie('ipAddress',ipAddress);
+			searchDelivery(ipAddress);
+		});
+	}
+}
+
+
+/**
+ * 根据省份获取运费信息
+ * @param province 省份名称
+ */
+function searchDelivery(province)
+{
+	var url = '{url:/block/searchPrivice/random/@random@}';
+	url = url.replace("@random@",Math.random);
+
+	$.getJSON(url,{'province':province},function(json)
+	{
+		if(json.flag == 'success')
+		{
+			delivery(json.area_id,province);
+			deliveryProvince       = json.area_id;
+			deliveryProvinceString = province;
+		}
+	});
+}
+
+/**
+ * 计算运费
+ * @param provinceId
+ * @param provinceName
+ */
+function delivery(provinceId,provinceName)
+{
+	$('.sel_area').text(provinceName);
+
+	var buyNums = $('#buyNums').val();
+	var productId = $('#product_id').val();
+	var goodsId = "{$id}";
+
+	//通过省份id查询出配送方式，并且传送总重量计算出运费,然后显示配送方式
+	var url = '{url:/block/order_delivery}';
+	$.getJSON(url,{'province':provinceId,'goodsId':goodsId,'productId':productId,'num':buyNums,'random':Math.random},function(json)
+	{
+		//清空配送信息
+		$('#deliveInfo').empty();
+
+		for(var item in json)
+		{
+			var deliveRowHtml = template.render('deliveInfoTemplate',json[item]);
+			$('#deliveInfo').append(deliveRowHtml);
+		}
+	});
+	deliveryProvince       = provinceId;
+	deliveryProvinceString = provinceName;
+	$('.area_box').hide();
+}
+
+//城市地域选择按钮事件
+$(".sel_area").toggle(
+  function () {
+  $('.area_box').show();
+  },
+  function () {
+   $('.area_box').hide();
+  }
+);
+
+
+	var swiper = new Swiper('.swiper-container', {
+	pagination: '.swiper-pagination',
+	paginationClickable: true
+	});
+
+
+
+</script>

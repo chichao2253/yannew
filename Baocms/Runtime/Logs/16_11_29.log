@@ -1,0 +1,575 @@
+[ 2016-11-29T13:12:13+08:00 ] 0.0.0.0 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.024694s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.024852s ]
+NOTIC: [2048] Declaration of SettingModel::fetchAll() should be compatible with that of CommonModel::fetchAll() D:\WWW_yannew\Baocms\Lib\Model\SettingModel.class.php 第 10 行.
+NOTIC: [2048] Declaration of SettingModel::save() should be compatible with that of Model::save() D:\WWW_yannew\Baocms\Lib\Model\SettingModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `yanan_setting` [ RunTime:0.049863s ]
+SQL: SELECT * FROM `yanan_setting`  [ RunTime:0.000301s ]
+SQL: SHOW COLUMNS FROM `yanan_city` [ RunTime:0.076058s ]
+NOTIC: [8] Undefined variable: str D:\WWW_yannew\ThinkPHP\Extend\Library\ORG\Crypt\Base64.class.php 第 69 行.
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `yanan_shop_cate` [ RunTime:0.033574s ]
+SQL: SELECT * FROM `yanan_shop_cate` ORDER BY `orderby` asc  [ RunTime:0.000718s ]
+SQL: SHOW COLUMNS FROM `yanan_tuan_cate` [ RunTime:0.079348s ]
+SQL: SHOW COLUMNS FROM `yanan_area` [ RunTime:0.042892s ]
+SQL: SHOW COLUMNS FROM `yanan_business` [ RunTime:0.033005s ]
+SQL: SELECT * FROM `yanan_business` ORDER BY `orderby` asc  [ RunTime:0.000607s ]
+SQL: SHOW COLUMNS FROM `yanan_pc_function` [ RunTime:0.046794s ]
+SQL: SELECT * FROM `yanan_pc_function` ORDER BY `orderby` asc  [ RunTime:0.000292s ]
+NOTIC: [2048] Declaration of TemplateModel::fetchAll() should be compatible with that of CommonModel::fetchAll() D:\WWW_yannew\Baocms\Lib\Model\TemplateModel.class.php 第 36 行.
+SQL: SHOW COLUMNS FROM `yanan_template` [ RunTime:0.031895s ]
+SQL: SELECT * FROM `yanan_template`  [ RunTime:0.000679s ]
+NOTIC: [8] Undefined variable: theme D:\WWW_yannew\Baocms\Lib\Action\Pchome\CommonAction.class.php 第 174 行.
+SQL: SHOW COLUMNS FROM `yanan_template_setting` [ RunTime:0.036368s ]
+SQL: SELECT * FROM `yanan_template_setting`  [ RunTime:0.000785s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Model\CommonModel.class.php 第 55 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW_yannew\Baocms\Lib\Model\TemplatesettingModel.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `yanan_keyword` [ RunTime:0.036437s ]
+SQL: SELECT * FROM `yanan_keyword`  [ RunTime:0.000180s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Model\CommonModel.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `yanan_housework_setting` [ RunTime:0.034207s ]
+SQL: SHOW COLUMNS FROM `yanan_housework` [ RunTime:0.050030s ]
+SQL: SELECT * FROM `yanan_housework_setting`  [ RunTime:0.000217s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+SQL: SHOW COLUMNS FROM `yanan_ele` [ RunTime:0.034100s ]
+SQL: SHOW COLUMNS FROM `yanan_life_cate` [ RunTime:0.055353s ]
+NOTIC: [2048] Declaration of SeoModel::fetchAll() should be compatible with that of CommonModel::fetchAll() D:\WWW_yannew\Baocms\Lib\Model\SeoModel.class.php 第 31 行.
+SQL: SHOW COLUMNS FROM `yanan_seo` [ RunTime:0.085335s ]
+NOTIC: [8] Constant THEME_NAME already defined D:\WWW_yannew\Baocms\Lib\Action\Pchome\CommonAction.class.php 第 152 行.
+NOTIC: [8] Undefined variable: theme D:\WWW_yannew\Baocms\Lib\Action\Pchome\CommonAction.class.php 第 174 行.
+NOTIC: [8] Constant THEME_PATH already defined D:\WWW_yannew\ThinkPHP\Lib\Core\View.class.php 第 154 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined D:\WWW_yannew\ThinkPHP\Lib\Core\View.class.php 第 155 行.
+INFO: [ view_parse ] --START--
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: format D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 82 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: format D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 82 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: format D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 82 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: format D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 82 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: format D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 82 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: format D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 82 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: format D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 82 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: format D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 82 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: format D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 82 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: format D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 82 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: format D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 82 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: format D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 82 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: format D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 82 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [8] Undefined variable: config D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 6 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, boolean given D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 50 行.
+NOTIC: [8] Undefined variable: keyword D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 142 行.
+SQL: SELECT * FROM `yanan_keyword` ORDER BY key_id desc LIMIT 0,8   [ RunTime:0.000313s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 154 行.
+NOTIC: [8] Undefined variable: cartnum D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 163 行.
+SQL: SHOW COLUMNS FROM `yanan_ad` [ RunTime:0.096683s ]
+SQL: SELECT * FROM `yanan_ad` WHERE (  closed=0 AND site_id=1 AND  city_id IN (0,5) and bg_date <= '2016-11-29' AND end_date >= '2016-11-29'  ) ORDER BY orderby asc LIMIT 0,5   [ RunTime:0.000375s ]
+SQL: SHOW COLUMNS FROM `yanan_tuan` [ RunTime:0.079899s ]
+SQL: SELECT * FROM `yanan_tuan` WHERE ( audit = 1 AND closed=0 AND city_id=5  ) ORDER BY orderby asc,sold_num desc LIMIT 0,25   [ RunTime:0.000331s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 410 行.
+SQL: SELECT * FROM `yanan_ad` WHERE (  closed=0 AND site_id=46 AND city_id IN (0,5)  and bg_date <= '2016-11-29' AND end_date >= '2016-11-29'  ) ORDER BY orderby asc LIMIT 0,1   [ RunTime:0.006072s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 460 行.
+SQL: SHOW COLUMNS FROM `yanan_goods` [ RunTime:0.070108s ]
+SQL: SELECT * FROM `yanan_goods` WHERE ( audit =1 AND closed=0 AND city_id = 5 ) ORDER BY orderby asc,sold_num desc LIMIT 0,8   [ RunTime:0.000323s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 463 行.
+NOTIC: [8] Undefined variable: linkArr D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 484 行.
+NOTIC: [2] array_merge() [<a href='function.array-merge'>function.array-merge</a>]: Argument #1 is not an array D:\WWW_yannew\Baocms\Common\common.php 第 796 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Common\common.php 第 798 行.
+SQL: SELECT * FROM `yanan_ad` WHERE (  closed=0 AND site_id=47 AND city_id IN (0,5)  and bg_date <= '2016-11-29' AND end_date >= '2016-11-29'  ) ORDER BY orderby asc LIMIT 0,1   [ RunTime:0.000273s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 488 行.
+SQL: SELECT * FROM `yanan_ad` WHERE (  closed=0 AND site_id=48 AND city_id IN (0,5)  and bg_date <= '2016-11-29' AND end_date >= '2016-11-29'  ) ORDER BY orderby asc LIMIT 0,3   [ RunTime:0.000270s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 493 行.
+SQL: SELECT * FROM `yanan_ele` WHERE ( audit = 1 AND city_id=5  ) ORDER BY orderby asc,sold_num desc LIMIT 0,2   [ RunTime:0.000369s ]
+SQL: SELECT * FROM `yanan_ele` WHERE ( audit = 1 AND city_id=5  ) ORDER BY orderby asc,sold_num desc LIMIT 2,5   [ RunTime:0.000241s ]
+SQL: SHOW COLUMNS FROM `yanan_coupon` [ RunTime:0.035676s ]
+SQL: SELECT * FROM `yanan_coupon` WHERE ( audit=1 AND closed=0 AND city_id=5 ) ORDER BY downloads desc,views desc LIMIT 0,5   [ RunTime:0.000222s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 544 行.
+SQL: SHOW COLUMNS FROM `yanan_shop` [ RunTime:0.096140s ]
+SQL: SELECT * FROM `yanan_shop` WHERE ( is_ding=1 AND audit=1 AND closed=0 AND  city_id=5 ) ORDER BY orderby asc,score desc LIMIT 0,4   [ RunTime:0.000509s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 564 行.
+SQL: SHOW COLUMNS FROM `yanan_shop_ding_setting` [ RunTime:0.068451s ]
+SQL: SHOW COLUMNS FROM `yanan_shop_ding_room` [ RunTime:0.058949s ]
+SQL: SELECT * FROM `yanan_shop` WHERE ( is_ding=1 AND audit=1 AND closed=0 AND  city_id=5 ) ORDER BY view desc LIMIT 0,3   [ RunTime:0.000469s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 608 行.
+SQL: SELECT * FROM `yanan_ad` WHERE (  closed=0 AND site_id=2 AND  city_id IN (0,5) and bg_date <= '2016-11-29' AND end_date >= '2016-11-29'  ) ORDER BY orderby asc LIMIT 0,1   [ RunTime:0.000379s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 620 行.
+SQL: SHOW COLUMNS FROM `yanan_activity` [ RunTime:0.144561s ]
+SQL: SELECT * FROM `yanan_activity` WHERE ( audit=1 AND closed=0 AND city_id=5 ) ORDER BY activity_id desc LIMIT 0,4   [ RunTime:0.000301s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 743 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 858 行.
+SQL: SHOW COLUMNS FROM `yanan_links` [ RunTime:0.038688s ]
+SQL: SELECT * FROM `yanan_links` ORDER BY orderby asc LIMIT 0,10   [ RunTime:0.000248s ]
+NOTIC: [8] Undefined variable: height_num D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 940 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:2.531701s ]
+INFO: [ view_parse ] --END-- [ RunTime:2.531826s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.020697s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.016295s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.017885s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.023059s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.078179s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.016796s ]
+INFO: [ view_end ] --END-- [ RunTime:0.016919s ]
+
+[ 2016-11-29T13:12:13+08:00 ] 0.0.0.0 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001147s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001302s ]
+NOTIC: [2048] Declaration of SettingModel::fetchAll() should be compatible with that of CommonModel::fetchAll() D:\WWW_yannew\Baocms\Lib\Model\SettingModel.class.php 第 10 行.
+NOTIC: [2048] Declaration of SettingModel::save() should be compatible with that of Model::save() D:\WWW_yannew\Baocms\Lib\Model\SettingModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `yanan_setting` [ RunTime:0.056903s ]
+SQL: SELECT * FROM `yanan_setting`  [ RunTime:0.000293s ]
+SQL: SHOW COLUMNS FROM `yanan_city` [ RunTime:0.037263s ]
+SQL: SELECT * FROM `yanan_city` ORDER BY `orderby` asc  [ RunTime:0.000597s ]
+NOTIC: [8] Undefined variable: str D:\WWW_yannew\ThinkPHP\Extend\Library\ORG\Crypt\Base64.class.php 第 69 行.
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `yanan_shop_cate` [ RunTime:0.056070s ]
+SQL: SHOW COLUMNS FROM `yanan_tuan_cate` [ RunTime:0.050378s ]
+SQL: SELECT * FROM `yanan_tuan_cate` ORDER BY `orderby` asc  [ RunTime:0.001152s ]
+SQL: SHOW COLUMNS FROM `yanan_area` [ RunTime:0.032175s ]
+SQL: SELECT * FROM `yanan_area` ORDER BY `orderby` asc  [ RunTime:0.000245s ]
+SQL: SHOW COLUMNS FROM `yanan_business` [ RunTime:0.042377s ]
+SQL: SELECT * FROM `yanan_business` ORDER BY `orderby` asc  [ RunTime:0.000293s ]
+SQL: SHOW COLUMNS FROM `yanan_pc_function` [ RunTime:0.068112s ]
+NOTIC: [2048] Declaration of TemplateModel::fetchAll() should be compatible with that of CommonModel::fetchAll() D:\WWW_yannew\Baocms\Lib\Model\TemplateModel.class.php 第 36 行.
+SQL: SHOW COLUMNS FROM `yanan_template` [ RunTime:0.045179s ]
+NOTIC: [8] Undefined variable: theme D:\WWW_yannew\Baocms\Lib\Action\Pchome\CommonAction.class.php 第 174 行.
+SQL: SHOW COLUMNS FROM `yanan_template_setting` [ RunTime:0.022486s ]
+SQL: SELECT * FROM `yanan_template_setting`  [ RunTime:0.000205s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Model\CommonModel.class.php 第 55 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW_yannew\Baocms\Lib\Model\TemplatesettingModel.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `yanan_keyword` [ RunTime:0.052230s ]
+SQL: SELECT * FROM `yanan_keyword`  [ RunTime:0.000169s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Model\CommonModel.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `yanan_housework_setting` [ RunTime:0.044459s ]
+SQL: SHOW COLUMNS FROM `yanan_housework` [ RunTime:0.083457s ]
+SQL: SELECT * FROM `yanan_housework_setting`  [ RunTime:0.000199s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\IndexAction.class.php 第 29 行.
+SQL: SHOW COLUMNS FROM `yanan_ele` [ RunTime:0.041185s ]
+SQL: SHOW COLUMNS FROM `yanan_life_cate` [ RunTime:0.084046s ]
+NOTIC: [2048] Declaration of SeoModel::fetchAll() should be compatible with that of CommonModel::fetchAll() D:\WWW_yannew\Baocms\Lib\Model\SeoModel.class.php 第 31 行.
+SQL: SHOW COLUMNS FROM `yanan_seo` [ RunTime:0.035956s ]
+SQL: SELECT * FROM `yanan_seo`  [ RunTime:0.000640s ]
+NOTIC: [8] Constant THEME_NAME already defined D:\WWW_yannew\Baocms\Lib\Action\Pchome\CommonAction.class.php 第 152 行.
+NOTIC: [8] Undefined variable: theme D:\WWW_yannew\Baocms\Lib\Action\Pchome\CommonAction.class.php 第 174 行.
+NOTIC: [8] Constant THEME_PATH already defined D:\WWW_yannew\ThinkPHP\Lib\Core\View.class.php 第 154 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined D:\WWW_yannew\ThinkPHP\Lib\Core\View.class.php 第 155 行.
+INFO: [ view_parse ] --START--
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: format D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 82 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: format D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 82 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: format D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 82 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: format D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 82 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: format D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 82 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: format D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 82 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: format D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 82 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: format D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 82 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: format D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 82 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: format D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 82 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: format D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 82 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: format D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 82 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php on line 74 and defined D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag D:\WWW_yannew\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+NOTIC: [8] Undefined index: format D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 82 行.
+NOTIC: [8] Undefined index: debug D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 83 行.
+NOTIC: [8] Undefined variable: items D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\TagLib\TagLibCalldata.class.php 第 107 行.
+NOTIC: [8] Undefined variable: config D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 6 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, boolean given D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 50 行.
+NOTIC: [8] Undefined variable: keyword D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 142 行.
+SQL: SELECT * FROM `yanan_keyword` ORDER BY key_id desc LIMIT 0,8   [ RunTime:0.000293s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 154 行.
+NOTIC: [8] Undefined variable: cartnum D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 163 行.
+SQL: SHOW COLUMNS FROM `yanan_ad` [ RunTime:0.065040s ]
+SQL: SELECT * FROM `yanan_ad` WHERE (  closed=0 AND site_id=1 AND  city_id IN (0,5) and bg_date <= '2016-11-29' AND end_date >= '2016-11-29'  ) ORDER BY orderby asc LIMIT 0,5   [ RunTime:0.001820s ]
+SQL: SHOW COLUMNS FROM `yanan_tuan` [ RunTime:0.041775s ]
+SQL: SELECT * FROM `yanan_tuan` WHERE ( audit = 1 AND closed=0 AND city_id=5  ) ORDER BY orderby asc,sold_num desc LIMIT 0,25   [ RunTime:0.000340s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 410 行.
+SQL: SELECT * FROM `yanan_ad` WHERE (  closed=0 AND site_id=46 AND city_id IN (0,5)  and bg_date <= '2016-11-29' AND end_date >= '2016-11-29'  ) ORDER BY orderby asc LIMIT 0,1   [ RunTime:0.000409s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 460 行.
+SQL: SHOW COLUMNS FROM `yanan_goods` [ RunTime:0.060692s ]
+SQL: SELECT * FROM `yanan_goods` WHERE ( audit =1 AND closed=0 AND city_id = 5 ) ORDER BY orderby asc,sold_num desc LIMIT 0,8   [ RunTime:0.000272s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 463 行.
+NOTIC: [8] Undefined variable: linkArr D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 484 行.
+NOTIC: [2] array_merge() [<a href='function.array-merge'>function.array-merge</a>]: Argument #1 is not an array D:\WWW_yannew\Baocms\Common\common.php 第 796 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Common\common.php 第 798 行.
+SQL: SELECT * FROM `yanan_ad` WHERE (  closed=0 AND site_id=47 AND city_id IN (0,5)  and bg_date <= '2016-11-29' AND end_date >= '2016-11-29'  ) ORDER BY orderby asc LIMIT 0,1   [ RunTime:0.000580s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 488 行.
+SQL: SELECT * FROM `yanan_ad` WHERE (  closed=0 AND site_id=48 AND city_id IN (0,5)  and bg_date <= '2016-11-29' AND end_date >= '2016-11-29'  ) ORDER BY orderby asc LIMIT 0,3   [ RunTime:0.000654s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 493 行.
+SQL: SELECT * FROM `yanan_ele` WHERE ( audit = 1 AND city_id=5  ) ORDER BY orderby asc,sold_num desc LIMIT 0,2   [ RunTime:0.000316s ]
+SQL: SELECT * FROM `yanan_ele` WHERE ( audit = 1 AND city_id=5  ) ORDER BY orderby asc,sold_num desc LIMIT 2,5   [ RunTime:0.000310s ]
+SQL: SHOW COLUMNS FROM `yanan_coupon` [ RunTime:0.076168s ]
+SQL: SELECT * FROM `yanan_coupon` WHERE ( audit=1 AND closed=0 AND city_id=5 ) ORDER BY downloads desc,views desc LIMIT 0,5   [ RunTime:0.000381s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 544 行.
+SQL: SHOW COLUMNS FROM `yanan_shop` [ RunTime:0.114632s ]
+SQL: SELECT * FROM `yanan_shop` WHERE ( is_ding=1 AND audit=1 AND closed=0 AND  city_id=5 ) ORDER BY orderby asc,score desc LIMIT 0,4   [ RunTime:0.000664s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 564 行.
+SQL: SHOW COLUMNS FROM `yanan_shop_ding_setting` [ RunTime:0.035869s ]
+SQL: SHOW COLUMNS FROM `yanan_shop_ding_room` [ RunTime:0.083682s ]
+SQL: SELECT * FROM `yanan_shop` WHERE ( is_ding=1 AND audit=1 AND closed=0 AND  city_id=5 ) ORDER BY view desc LIMIT 0,3   [ RunTime:0.000423s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 608 行.
+SQL: SELECT * FROM `yanan_ad` WHERE (  closed=0 AND site_id=2 AND  city_id IN (0,5) and bg_date <= '2016-11-29' AND end_date >= '2016-11-29'  ) ORDER BY orderby asc LIMIT 0,1   [ RunTime:0.000332s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 620 行.
+SQL: SHOW COLUMNS FROM `yanan_activity` [ RunTime:0.094657s ]
+SQL: SELECT * FROM `yanan_activity` WHERE ( audit=1 AND closed=0 AND city_id=5 ) ORDER BY activity_id desc LIMIT 0,4   [ RunTime:0.000282s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 743 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 858 行.
+SQL: SHOW COLUMNS FROM `yanan_links` [ RunTime:0.075127s ]
+SQL: SELECT * FROM `yanan_links` ORDER BY orderby asc LIMIT 0,10   [ RunTime:0.000278s ]
+NOTIC: [8] Undefined variable: height_num D:\WWW_yannew\Baocms\Runtime\Cache\Pchome\01dfbfe19c56d3f7c3374b803e3d748e.php 第 940 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:2.557668s ]
+INFO: [ view_parse ] --END-- [ RunTime:2.557767s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001476s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.009655s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.017885s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.023051s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.052301s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.016648s ]
+INFO: [ view_end ] --END-- [ RunTime:0.016741s ]
+
+[ 2016-11-29T13:19:18+08:00 ] 0.0.0.0 /index.php?g=pchome&m=mall&a=goods&_=1480396334261
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000970s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001075s ]
+NOTIC: [2048] Declaration of SettingModel::fetchAll() should be compatible with that of CommonModel::fetchAll() D:\WWW_yannew\Baocms\Lib\Model\SettingModel.class.php 第 10 行.
+NOTIC: [2048] Declaration of SettingModel::save() should be compatible with that of Model::save() D:\WWW_yannew\Baocms\Lib\Model\SettingModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `yanan_setting` [ RunTime:0.063719s ]
+SQL: SHOW COLUMNS FROM `yanan_city` [ RunTime:0.026487s ]
+NOTIC: [8] Undefined variable: str D:\WWW_yannew\ThinkPHP\Extend\Library\ORG\Crypt\Base64.class.php 第 69 行.
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `yanan_shop_cate` [ RunTime:0.022041s ]
+SQL: SHOW COLUMNS FROM `yanan_tuan_cate` [ RunTime:0.032428s ]
+SQL: SHOW COLUMNS FROM `yanan_area` [ RunTime:0.025483s ]
+SQL: SHOW COLUMNS FROM `yanan_business` [ RunTime:0.016116s ]
+SQL: SHOW COLUMNS FROM `yanan_pc_function` [ RunTime:0.025229s ]
+NOTIC: [2048] Declaration of TemplateModel::fetchAll() should be compatible with that of CommonModel::fetchAll() D:\WWW_yannew\Baocms\Lib\Model\TemplateModel.class.php 第 36 行.
+SQL: SHOW COLUMNS FROM `yanan_template` [ RunTime:0.019405s ]
+NOTIC: [8] Undefined variable: theme D:\WWW_yannew\Baocms\Lib\Action\Pchome\CommonAction.class.php 第 174 行.
+SQL: SHOW COLUMNS FROM `yanan_template_setting` [ RunTime:0.015971s ]
+SQL: SELECT * FROM `yanan_template_setting`  [ RunTime:0.000215s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Model\CommonModel.class.php 第 55 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW_yannew\Baocms\Lib\Model\TemplatesettingModel.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `yanan_goods_cate` [ RunTime:0.023049s ]
+SQL: SELECT * FROM `yanan_goods_cate` ORDER BY `orderby` asc  [ RunTime:0.000214s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Model\CommonModel.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `yanan_keyword` [ RunTime:0.020823s ]
+SQL: SELECT * FROM `yanan_keyword`  [ RunTime:0.000206s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Model\CommonModel.class.php 第 55 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given D:\WWW_yannew\Baocms\Lib\Action\Pchome\MallAction.class.php 第 21 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\MallAction.class.php 第 958 行.
+NOTIC: [2048] Declaration of SeoModel::fetchAll() should be compatible with that of CommonModel::fetchAll() D:\WWW_yannew\Baocms\Lib\Model\SeoModel.class.php 第 31 行.
+SQL: SHOW COLUMNS FROM `yanan_seo` [ RunTime:0.028841s ]
+NOTIC: [8] Constant THEME_NAME already defined D:\WWW_yannew\Baocms\Lib\Action\Pchome\CommonAction.class.php 第 152 行.
+NOTIC: [8] Undefined variable: theme D:\WWW_yannew\Baocms\Lib\Action\Pchome\CommonAction.class.php 第 174 行.
+NOTIC: [8] Constant THEME_PATH already defined D:\WWW_yannew\ThinkPHP\Lib\Core\View.class.php 第 154 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined D:\WWW_yannew\ThinkPHP\Lib\Core\View.class.php 第 155 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.041007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041068s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000381s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000366s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000329s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000414s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001601s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000590s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000632s ]
+
+[ 2016-11-29T13:19:18+08:00 ] 0.0.0.0 /index.php?g=pchome&m=mall&a=goods&_=1480396334262
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000729s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000810s ]
+NOTIC: [2048] Declaration of SettingModel::fetchAll() should be compatible with that of CommonModel::fetchAll() D:\WWW_yannew\Baocms\Lib\Model\SettingModel.class.php 第 10 行.
+NOTIC: [2048] Declaration of SettingModel::save() should be compatible with that of Model::save() D:\WWW_yannew\Baocms\Lib\Model\SettingModel.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `yanan_setting` [ RunTime:0.057093s ]
+SQL: SHOW COLUMNS FROM `yanan_city` [ RunTime:0.029524s ]
+NOTIC: [8] Undefined variable: str D:\WWW_yannew\ThinkPHP\Extend\Library\ORG\Crypt\Base64.class.php 第 69 行.
+NOTIC: 建议使用I方法替代_get
+SQL: SHOW COLUMNS FROM `yanan_shop_cate` [ RunTime:0.020320s ]
+SQL: SHOW COLUMNS FROM `yanan_tuan_cate` [ RunTime:0.027946s ]
+SQL: SHOW COLUMNS FROM `yanan_area` [ RunTime:0.027704s ]
+SQL: SHOW COLUMNS FROM `yanan_business` [ RunTime:0.020528s ]
+SQL: SHOW COLUMNS FROM `yanan_pc_function` [ RunTime:0.019824s ]
+NOTIC: [2048] Declaration of TemplateModel::fetchAll() should be compatible with that of CommonModel::fetchAll() D:\WWW_yannew\Baocms\Lib\Model\TemplateModel.class.php 第 36 行.
+SQL: SHOW COLUMNS FROM `yanan_template` [ RunTime:0.023314s ]
+NOTIC: [8] Undefined variable: theme D:\WWW_yannew\Baocms\Lib\Action\Pchome\CommonAction.class.php 第 174 行.
+SQL: SHOW COLUMNS FROM `yanan_template_setting` [ RunTime:0.021017s ]
+SQL: SELECT * FROM `yanan_template_setting`  [ RunTime:0.000162s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Model\CommonModel.class.php 第 55 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW_yannew\Baocms\Lib\Model\TemplatesettingModel.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `yanan_goods_cate` [ RunTime:0.036366s ]
+SQL: SELECT * FROM `yanan_goods_cate` ORDER BY `orderby` asc  [ RunTime:0.000200s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Model\CommonModel.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `yanan_keyword` [ RunTime:0.020801s ]
+SQL: SELECT * FROM `yanan_keyword`  [ RunTime:0.000213s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Model\CommonModel.class.php 第 55 行.
+NOTIC: [2] array_sum() expects parameter 1 to be array, null given D:\WWW_yannew\Baocms\Lib\Action\Pchome\MallAction.class.php 第 21 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW_yannew\Baocms\Lib\Action\Pchome\MallAction.class.php 第 958 行.
+NOTIC: [2048] Declaration of SeoModel::fetchAll() should be compatible with that of CommonModel::fetchAll() D:\WWW_yannew\Baocms\Lib\Model\SeoModel.class.php 第 31 行.
+SQL: SHOW COLUMNS FROM `yanan_seo` [ RunTime:0.031469s ]
+NOTIC: [8] Constant THEME_NAME already defined D:\WWW_yannew\Baocms\Lib\Action\Pchome\CommonAction.class.php 第 152 行.
+NOTIC: [8] Undefined variable: theme D:\WWW_yannew\Baocms\Lib\Action\Pchome\CommonAction.class.php 第 174 行.
+NOTIC: [8] Constant THEME_PATH already defined D:\WWW_yannew\ThinkPHP\Lib\Core\View.class.php 第 154 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined D:\WWW_yannew\ThinkPHP\Lib\Core\View.class.php 第 155 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.025981s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026045s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000356s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000370s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000299s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000403s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001538s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000625s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000677s ]
+

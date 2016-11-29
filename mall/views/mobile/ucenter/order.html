@@ -1,0 +1,19 @@
+<section>
+    <div class="pending-detial">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">订单列表</h3>
+            </div>
+            <ul class="list-group">
+                {set:$user_id = $this->user['user_id']} {set:$page=(isset($_GET['page'])&&(intval($_GET['page'])>0))?intval($_GET['page']):1;} {set:$queryOrderList = Api::run('getOrderList',$user_id)} {foreach:items = $queryOrderList->find()}
+                <li class="list-group-item "><a href="{url:/ucenter/order_detail/id/$item[id]}">订单号：{$item['order_no']}</a><i class="fa fa-chevron-right"></i></li>
+                {/foreach}
+            </ul>
+        </div>
+        <ul>
+            {if:$queryOrderList} {$queryOrderList->getPageBar()} {else:}
+            <li class="noinfo">暂无数据</li>
+            {/if}
+        </ul>
+    </div>
+</section>

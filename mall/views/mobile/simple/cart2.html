@@ -1,0 +1,509 @@
+{js:artTemplate}
+<script type='text/javascript' src='{theme:javascript/artTemplate/area_select.js}'></script>
+<script type='text/javascript' src='{theme:javascript/orderFormClass.js}'></script>
+<style>
+.block-row {
+border: none;
+}
+label{
+	font-weight: normal;
+}
+</style>
+<script type='text/javascript'>
+//创建订单表单实例
+orderFormInstance = new orderFormClass();
+sellerList = {echo:JSON::encode($this->seller)};
+ticketList = {echo:JSON::encode($this->prop)};
+
+//DOM加载完毕
+jQuery(function(){
+
+	//初始化地域联动JS模板
+	template.compile("areaTemplate",areaTemplate);
+
+	//收货地址数据
+	orderFormInstance.addressInit("{$this->defaultAddressId}");
+
+	//配送方式初始化
+	orderFormInstance.deliveryInit("{$this->custom['delivery']}");
+
+	//自提点初始化
+	$('[name="takeself"]').val({$this->custom['takeself']});
+
+	//支付方式
+	orderFormInstance.paymentInit("{$this->custom['payment']}");
+
+	//商品价格
+	orderFormInstance.goodsSum = "{$this->final_sum}";
+});
+
+/**
+ * 生成地域js联动下拉框
+ * @param name
+ * @param parent_id
+ * @param select_id
+ */
+function createAreaSelect(name,parent_id,select_id)
+{
+	//生成地区
+	$.getJSON("{url:/block/area_child}",{"aid":parent_id,"random":Math.random()},function(json)
+	{
+		$('[name="'+name+'"]').html(template.render('areaTemplate',{"select_id":select_id,"data":json}));
+	});
+}
+
+//[address]保存到常用的收货地址
+function address_save()
+{
+	if(orderFormInstance.addressCheck())
+	{
+		$.getJSON('{url:/simple/address_add}',$('form[name="order_form"]').serialize(),function(content){
+			if(content.data)
+			{
+				var addressLiHtml = template.render('addressLiTemplate',{"item":content.data});
+				$('.addr_list').prepend(addressLiHtml);
+				$('input:radio[name="radio_address"]:first').trigger('click');
+			}
+			orderFormInstance.addressSave();
+		});
+	}
+}
+
+//[delivery]根据省份地区ajax获取配送方式
+function get_delivery()
+{
+	var province = $('[name="province"]').val();
+	var delivery = $('[name="delivery_id"]:checked').val();
+	if(!province || !delivery)
+	{
+		return;
+	}
+
+	var goodsId   = [];
+	var productId = [];
+	var num       = [];
+	$('[id^="deliveryFeeBox_"]').each(function(i)
+	{
+		var idValue = $(this).attr('id');
+		var dataArray = idValue.split("_");
+
+		goodsId.push(dataArray[1]);
+		productId.push(dataArray[2]);
+		num.push(dataArray[3]);
+	});
+
+	$.getJSON("{url:/block/order_delivery}",{"province":province,"distribution":delivery,"goodsId":goodsId,"productId":productId,"num":num},function(content){
+		//地区无法送达
+		if(content.if_delivery == 1)
+		{
+			$("#deliveryPrice").html('您选择地区部分商品无法送达');
+			alert('您选择地区部分商品无法送达');
+		}
+		else
+		{
+			$("#deliveryPrice").html('￥'+content.price);
+			orderFormInstance.protectPrice  = parseFloat(content.protect_price);
+			orderFormInstance.deliveryPrice = parseFloat(content.price);
+			orderFormInstance.doAccount();
+		}
+	});
+}
+
+
+
+
+//选择自提点
+function selectTakeself(deliveryId)
+{
+	art.dialog.open("{url:/block/takeself}",{
+		title:'选择自提点',
+		okVal:'选择',
+		width:"100%",
+		ok:function(iframeWin, topWin)
+		{
+			var takeselfJson = $(iframeWin.document).find('[name="takeselfItem"]:checked').val();
+
+			if(!takeselfJson)
+			{
+				alert('请选择自提点');
+				return false;
+			}
+			var json = $.parseJSON(takeselfJson);
+			$('#takeself'+deliveryId).empty();
+			$('[name="takeself"]').val(json.id);
+			$('#takeself'+deliveryId).html(template.render('takeselfTemplate',{"item":json}));
+			return true;
+		}
+	});
+}
+
+
+</script>
+<section class="member_main">
+    <div class="white_bg">
+        <ul class="list-unstyled container">
+            <li><i class="fa fa-shopping-cart kcart"></i>
+            </li>
+            <li><a href="#">填写和提交订单信息</a></li>
+        </ul>
+    </div>
+    <div class="height15"></div>
+    <div class="container info">
+        <form action='{url:/simple/cart3}' class="form" method='post' name='order_form' callback='orderFormInstance.isSubmit();'>
+            <input type='hidden' name='timeKey' value='{echo:time()}' />
+            <input type='hidden' name='direct_gid' value='{$this->gid}' />
+            <input type='hidden' name='direct_type' value='{$this->type}' />
+            <input type='hidden' name='direct_num' value='{$this->num}' />
+            <input type='hidden' name='direct_promo' value='{$this->promo}' />
+            <input type='hidden' name='direct_active_id' value='{$this->active_id}' />
+            <input type='hidden' name='takeself' value='0' />
+            <div class="cart_box m_10">
+                <div class="cont">
+                    <!--地址管理 开始-->
+                    <div class="">
+                        <div class="info_head">
+                            <a class="normal f12" href="javascript:void(0)" id="addressToggleButton" onclick="orderFormInstance.addressModToggle();"><span>[退出]</span></a> 收货人信息
+                        </div>
+                        <!--地址展示 开始-->
+                        <div class="table info_table white" id="address_show_box" style='display:none'>
+                            <ul id="addressShowBox"></ul>
+                            <!--收货地址展示模板-->
+                            <script type='text/html' id='addressShowTemplate'>
+                                <li class="kli">
+                                    <div class="kleft left">收货人姓名：</div>
+                                    <div class="kright left">
+                                        <%=accept_name%>
+                                    </div>
+                                </li>
+                                <li class="kli">
+                                    <div class="kleft left ">省份：</div>
+                                    <div class="kright left khidden">
+                                        <%=province_val%>
+                                            <%=city_val%>
+                                                <%=area_val%>
+                                    </div>
+                                </li>
+                                <li class="kli">
+                                    <div class="kleft left">地址：</div>
+                                    <div class="kright left khidden">
+                                        <%=address%>
+                                    </div>
+                                </li>
+                                <li class="kli">
+                                    <div class="kleft left">手机号码：</div>
+                                    <div class="kright left">
+                                        <%=mobile%>
+                                    </div>
+                                </li>
+                                <li class="kli">
+                                    <div class="kleft left">固定电话：</div>
+                                    <div class="kright left">
+                                        <%=teldivhone%>
+                                    </div>
+                                </li>
+                                <li class="kli">
+                                    <div class="kleft left">邮政编码：</div>
+                                    <div class="kright left">
+                                        <%=zip%>
+                                    </div>
+                                </li>
+                            </script>
+                        </div>
+                        <!--地址展示 结束-->
+                        <!--收货表单信息 开始-->
+                        <div id='address_often' class="prompt_4 m_10">
+                            <ul class="addr_list block-row" style="padding-bottom:0">
+                                {foreach:items=$this->addressList}
+                                <li>
+                                    <label>
+                                        <input class="radio option-input radio" name="radio_address" type="radio"  style="position:relative" value="{$item['id']}" onclick='orderFormInstance.addressSelected({echo:JSON::encode($item)});' />{$item['accept_name']}&nbsp;&nbsp;&nbsp;&nbsp;{$item['province_val']} {$item['city_val']} {$item['area_val']} {$item['address']}</label>
+                                </li>
+                                {/foreach}
+                                <li>
+                                    <label>
+                                        <input type='radio' name='radio_address' class="option-input radio" style="position:relative" onclick='orderFormInstance.addressEmpty();' value='' />其他收货地址</label>
+                                </li>
+                            </ul>
+                            <!--收货地址项模板-->
+                            <script type='text/html' id='addressLiTemplate'>
+                                <li>
+                                    <label>
+                                        <input class="radio" name="radio_address" type="radio" class="option-input radio" style="position:relative" value="<%=item['id']%>" onclick='orderFormInstance.addressSelected(<%=jsonToString(item)%>);' />
+                                        <%=item['accept_name']%>&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <%=item['province_val']%>
+                                                <%=item['city_val']%>
+                                                    <%=item['area_val']%>
+                                                        <%=item['address']%>
+                                    </label>
+                                </li>
+                            </script>
+                        </div>
+                        <ul id='address_form' class="block-row">
+                            <div class="form-group">
+                                <label for="input" class="col-sm-2 control-label">收货人姓名:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="accept_name" class="form-control" pattern="required" initmsg=''>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="input" class="col-sm-2 control-label">所在地区:</label>
+                                <div class="col-sm-2">
+                                    <select name="province" child="city,area" onchange="areaChangeCallback(this);" class="form-control">
+                                    </select>
+                                </div>
+                                <div class="col-sm-2">
+                                    <select name="city" child="area" parent="province" onchange="areaChangeCallback(this);" class="form-control">
+                                    </select>
+                                </div>
+                                <div class="col-sm-2">
+                                    <select name="area" parent="city" class="form-control">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="input" class="col-sm-2 control-label">联系地址:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name='address' class="form-control" value="" pattern="" title="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="input" class="col-sm-2 control-label">手机号码:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name='mobile' class="form-control" value="" pattern="" title="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="input" class="col-sm-2 control-label">固定电话:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name='telephone' class="form-control" value="" pattern="" title="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="input" class="col-sm-2 control-label">邮编:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name='zip' class="form-control" value="" pattern="" title="">
+                                </div>
+                            </div>
+                        </ul>
+                        <!--收货表单信息 结束-->
+                        <label id='address_save_button' style="width:100%">
+                            <input type="button" style="width:100%" value="保存收货人地址" class="btn btn-primary" onclick="address_save();" />
+                        </label>
+                    </div>
+                    <!--地址管理 结束-->
+                </div>
+                <!--配送方式 开始-->
+                <div class="" id='deliveryBox' style='display:none;'>
+                    <div class="info_head">
+                        <a class="normal f12" href="javascript:void(0)" id='deliveryToggleButton' onclick="orderFormInstance.deliveryModToggle();">[关闭]</a>配送方式
+                    </div>
+                    <!--配送展示 开始-->
+                    <div id="delivery_show_box" style='display:none'>
+                        <ul class="" id="deliveryShowBox"></ul>
+                        <!--配送方式展示模板-->
+                        <script type='delivery' id='deliveryShowTemplate'>
+                            <li class="kli">
+                                <div class="kleft left">配送方式：</div>
+                                <div class="kright left">
+                                    <%=name%>
+                                </div>
+                            </li>
+                            <li class="kli">
+                                <div class="kleft left">运费：</div>
+                                <div class="kright left" id="deliveryPrice"></div>
+                            </li>
+                        </script>
+                    </div>
+                    <!--配送展示 结束-->
+                    <!--配送修改 开始-->
+                    <div id='delivery_form'>
+                        <ul>
+                            {set:$deliveryData = Api::run('getDeliveryList')} {foreach:items = $deliveryData}
+                            <li>
+                                <label>
+                                    <input type="radio" class="option-input radio" style="position:relative" name="delivery_id" value="{$item['id']}" paytype="{$item['type']}" onclick='orderFormInstance.deliverySelected({echo:JSON::encode($item)});' />{$item['name']}</label>
+                                {$item['description']} {if:$item['type'] == 2}
+                                <a href="javascript:selectTakeself({$item['id']});"><span class="red">选择自提点</span></a>
+                                <span id="takeself{$item['id']}"></span> {/if}
+                            </li>
+                            {/foreach}
+                        </ul>
+                        <script type='text/html' id='takeselfTemplate'>
+                            <%=item['province_str']%>
+                                <%=item['city_str']%>
+                                    <%=item['area_str']%>
+                                        <%=item['address']%>
+                                            <%=item['phone']%>
+                                                <%=item['mobile']%>
+                        </script>
+                        <ul class="block-row" style="padding-bottom:0">
+                            <li>
+                                指定送货时间：
+                                <label>
+                                    <input type='radio' class="option-input radio" style="position:relative" name='accept_time' checked="checked" value='任意' />任意</label>
+                                <label>
+                                    <input type='radio' class="option-input radio" style="position:relative" name='accept_time' value='周一到周五' />周一到周五</label>
+                                <label>
+                                    <input type='radio' class="option-input radio" style="position:relative" name='accept_time' value='周末' />周末</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--配送修改 结束-->
+                    <label id="delivery_save_button" style="width:100%">
+                        <input type="button" class="btn btn-primary" style="width:100%" onclick="orderFormInstance.deliverySave();" value="保存配送方式" />
+                    </label>
+                </div>
+                <!--配送方式 结束-->
+                <!--支付方式 开始-->
+                <div class="" id='paymentBox' style='display:none;'>
+                    <div class="info_head">
+                        <a class="normal f12" href="javascript:void(0)" id='paymentToggleButton' onclick="orderFormInstance.paymentModToggle();">[关闭]</a> 支付方式
+                    </div>
+                    <ul class="block-row" id='payment_form' style="padding-bottom:0">
+                        {set:$paymentList=Api::run('getPaymentList')} {foreach:items = $paymentList} {set:$paymentPrice = CountSum::getGoodsPaymentPrice($item['id'],$this->sum);}
+                        <li>
+                            <input class="radio option-input radio" style="position:relative" name="payment" alt="{$paymentPrice}" onclick='orderFormInstance.paymentSelected({echo:JSON::encode($item)});' title="{$item['name']}" type="radio" value="{$item['id']}" />{$item['name']} {$item['note']} 支付手续费：￥{$paymentPrice}
+                        </li>
+                        {/foreach}
+                    </ul>
+                    <div id="payment_show_box" style='display:none;'>
+                        <ul class="" id="paymentShowBox"></ul>
+                        <!--支付方式模板-->
+                        <script type='text/html' id='paymentShowTemplate'>
+                            <li class="kli">
+                                <div class="kleft left">支付方式：</div>
+                                <div class="kright left">
+                                    <%=name%>
+                                </div>
+                            </li>
+                        </script>
+                    </div>
+                    <label id='payment_save_button' style="width:100%">
+                        <input type="button" style="width:100%" class="btn btn-primary" onclick="orderFormInstance.paymentSave();" value="保存支付方式" />
+                    </label>
+                </div>
+                <!--支付方式 结束-->
+                <!--订单留言 开始-->
+                <div class="">
+                    <div class="info_head">
+                        <a class="normal f12" href="javascript:void(0)" id='messageToggleButton' onclick="orderFormInstance.messageModToggle();">[修改]</a> 订单附言
+                    </div>
+                    <div id='message_show_box'>
+                        <ul>
+                            <li id="messageShowBox"></li>
+                        </ul>
+                    </div>
+                    <ul id='message_form' style='display:none;'>
+                        <li>
+                            订单附言：
+                            <input class="form-control" type="text" name='message' />
+                        </li>
+                    </ul>
+                    <label id='message_save_button' style='display:none;width:100%'>
+                        <input type="button" class="btn btn-primary" style="width:100%" onclick="orderFormInstance.messageSave();" value="保存订单附言" />
+                    </label>
+                </div>
+                <!--订单留言 结束-->
+                <!--购买清单 开始-->
+                <div class="block-box">
+                    <div class="info_head">购买的商品</div>
+                    <ul class="block-row" {if:empty($this->promotion)}style="display:none"{/if}> {foreach:items = $this->promotion}
+                        <li class="indent blue">{$item['plan']}，{$item['info']}</li>
+                        {/foreach}
+                    </ul>
+                    <!-- 商品展示 开始-->
+                    {foreach:items = $this->goodsList}
+                    <div class="pro_list border-bottom">
+                        <div class="col-xs-4">
+                            <a href="{url:/site/products/id/$item[goods_id]}"><img src="{url:/pic/thumb/img/$item[img]/w/80/h/80}" class="img-responsive" alt=""></a>
+                        </div>
+                        <div class="col-xs-5">
+                            <h10><a href="{url:/site/products/id/$item[goods_id]}">{$item['name']}</a></h10>
+                            <br> {if:isset($item['spec_array'])}
+                            <h10>{set:$spec_array=Block::show_spec($item['spec_array']);} {foreach:items=$spec_array item=$specValue key=$specName} {$specName}：{$specValue} &nbsp&nbsp {/foreach}
+                            </h10>
+                            {/if}
+                        </div>
+                        <div class="col-xs-3">
+                            <h10 class="disnone" id="deliveryFeeBox_{$item['goods_id']}_{$item['product_id']}_{$item['count']}"></h10>
+                            <br>
+                            <h10>数量：{$item['count']}</h10>
+                            <br>
+                            <h10>小计：￥{$item['sum']}</h10>
+                        </div>
+                    </div>
+                    {/foreach}
+                    <!-- 商品展示 结束-->
+                </div>
+                <!--购买清单 结束-->
+                <!--金额结算-->
+                <div class="block-box" id='amountBox' style='display:none;'>
+                    <div class="info_head">结算信息</div>
+                    <ul class="list-group" style="background:#fff">
+                        <li>
+                            {if:$this->final_sum != $this->sum}优惠后总金额{else:}商品总金额{/if}：<strong>{$this->final_sum}</strong> - 代金券：<strong name='ticket_value'>0</strong> + 税金：<strong id='tax_fee'>0</strong> + 运费总计：<strong id='delivery_fee_show'>0</strong> + 保价：<strong id='protect_price_value'>0</strong> + 支付手续费：<strong id='payment_value'>0</strong>
+                        </li>
+                        <li>
+                            <input type="button" style="width:100%" class="btn btn-primary" id="ticket_a" value="使用代金券" />
+                        </li>
+                        <li>
+                            <!--代金券列表 开始-->
+                            <div style='display:none' id='ticket_box'>
+                                <b>请选择代金券，并应用于商家</b>
+                                <select name="ticketUserd" onchange="selectSeller();">{foreach:items=$this->sellerList}
+                                    <option value="{$item['id']}">{$item['true_name']}</option>{/foreach}</select>
+                                <ul id='ticket_show_box'></ul>
+                                <!--代金券模板-->
+                                <script type='text/html' id='ticketTrTemplate'>
+                                    <li>
+                                        <label>
+                                            <input class="radio" class="option-input radio" style="position:relative" name="ticket_id" onclick="userTicket(<%=item.seller_id%>,<%=item.value%>);" type="radio" value="<%=item.id%>" alt="<%=item.value%>" />
+                                            <%=item.name%>
+                                        </label>
+                                        编号：
+                                        <%=item.card_name%>
+                                            优惠：<span class="red2">￥<b><%=item.value%></b></span>
+                                    </li>
+                                </script>
+                                <ul>
+                                    <li>
+                                        <input type="button" class="btn btn-primary" style="width:100%;margin-top:10px" onclick="cancel_ticket();" value="取消代金券" />
+                                    </li>
+                                    <li>卡号：
+                                        <input type='text' class="form-control" id='ticket_num' />
+                                    </li>
+                                    <li>密码：
+                                        <input type='password' class="form-control" id='ticket_pwd' />
+                                    </li>
+                                    <li style="margin-top:20px">
+                                        <input type="button" style="width:100%" class="btn btn-primary" onclick="add_ticket('{url:/block/add_download_ticket}');" value="添加" />
+                                    </li>
+                                    <li>使用了代金券 可以优惠 <strong class="red2" name='ticket_value'>0</strong> 元</li>
+                                </ul>
+                            </div>
+                            <!--代金券列表 结束-->
+                        </li>
+                    </ul>
+                </div>
+                <ul style="padding-bottom:0">
+                    <li>
+                        是否需要发票？(税金:￥{$this->goodsTax})
+                        <input class="radio" class="option-input radio" style="position:relative" onclick="orderFormInstance.doAccount();$('#tax_title').toggle();" name="taxes" type="checkbox" value="{$this->goodsTax}" />
+                    </li>
+                    <li>
+                        <label id="tax_title" style='display:none'>
+                            发票抬头：
+                            <input type='text' class="form-control" name='tax_title' />
+                        </label>
+                    </li>
+                    <li>
+                        应付总额：<span class="red">￥<strong id='final_sum'>{$this->final_sum}</strong></span>元
+                    </li>
+                    <li>
+                        <input type="submit" class="btn btn-primary" style="width:100%" value="提交订单" />
+                    </li>
+                </ul>
+            </div>
+        </form>
+    </div>
+</section>

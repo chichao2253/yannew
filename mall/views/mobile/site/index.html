@@ -1,0 +1,147 @@
+{set:
+	$site_config=new Config('site_config');
+	$seo_data=array();
+	$seo_data['title']=$site_config->name;
+	$seo_data['title'].=$site_config->index_seo_title;
+	$seo_data['keywords']=$site_config->index_seo_keywords;
+	$seo_data['description']=$site_config->index_seo_description;
+	seo::set($seo_data);
+}
+<script type="text/javascript" src="{theme:javascript/jquery.flexslider-min.js}">
+</script>
+<link rel="stylesheet" href="{skin:css/index.css}" type="text/css">
+<!--幻灯片 开始-->
+<div class="flexslider">
+    {if:$this->index_slide}
+    <ul class="slides">
+        {foreach:items=$this->index_slide}
+        <li>
+            <a href="{url:$item[url]}" target="_blank"> <img src="{webroot:$item[img]}" alt=""></a>
+            <p class="slider-description">{$item['name']}</p>
+        </li>
+        {/foreach}
+    </ul>
+    {/if}
+</div>
+<!--幻灯片 结束-->
+<!--菜单 开始-->
+<div class="row row_category ">
+    <div class="row clearfix" style="padding-left:15px;padding-right:15px">
+        <div class="col-md-3 col-xs-3 column  kros_li">
+            <div class="text-center">
+                <a href="{url:site/map}">
+                    <span class="fa-stack fa-lg kros_span">
+					    <i class="fa fa-circle fa-stack-2x kros_i" style="color:#ffb700"></i>
+					    <i class="fa fa-qrcode fa-stack-1x fa-inverse "></i>
+					</span>
+                </a>
+                <p>全部分类</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-xs-3 column kros_li">
+            <div class="text-center">
+                <a href="{url:simple/cart}">
+                    <span class="fa-stack fa-lg kros_span">
+						<i class="fa fa-circle fa-stack-2x kros_i" style="color:#ff67b9"></i>
+						<i class="fa fa-shopping-cart fa-stack-1x fa-inverse "></i>
+					</span>
+                </a>
+                <p>购物车</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-xs-3 column kros_li">
+            <div class="text-center">
+                <a href="{url:site/groupon}">
+                    <span class="fa-stack fa-lg kros_span">
+						<i class="fa fa-circle fa-stack-2x kros_i" style="color:#56b2ff"></i>
+						<i class="fa fa-gavel fa-stack-1x fa-inverse "></i>
+					</span>
+                </a>
+                <p>今日团购</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-xs-3 column kros_li">
+            <div class="text-center">
+                <a href="{url:ucenter/favorite}">
+                    <span class="fa-stack fa-lg kros_span">
+						<i class="fa fa-circle fa-stack-2x kros_i" style="color:#ff6d57"></i>
+						<i class="fa fa-star fa-stack-1x fa-inverse "></i>
+					</span>
+                </a>
+                <p>我的收藏</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--菜单 结束-->
+{echo:Ad::show("首页顶部通栏510*120(mobile)")}
+<!--首页推荐商品列表 开始-->
+<div id="list">
+    <span class="fa fa-paperclip"></span>
+    <div class="yui3-u-20-24 kros_t">商品推荐</div>
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 col-xs-12 column">
+                <div class="row">
+                    {foreach:items = Api::run('getCommendRecom')}
+                    <div class="col-md-6 col-xs-6">
+                        <div class="thumbnail">
+                            <a href="{url:/site/products/id/$item[id]}"><img title="{$item['name']}" src="{url:/pic/thumb/img/$item[img]/w/300/h/300}" /></a>
+                            <div class="caption">
+                                <h6>
+									<a href="{url:/site/products/id/$item[id]}">{$item['name']}</a>
+								</h6>
+                            </div>
+                        </div>
+                    </div>
+                    {/foreach}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--首页推荐商品列表 结束-->
+{echo:Ad::show("首页中部通栏510*200(mobile)")}
+
+<div class="container">
+    <div style="border:1px solid #e1e1e1;margin:0 0 20px">
+        <div class="row">
+            <div style="text-align:center;height:70px;padding-top:10px;padding-bottom:10px;" class="col-md-4">
+                <i style="font-size:36px;display:inline-block;" class="fa fa-truck"></i>
+                <div class="text-area">
+                    <h3 style="margin:0;">免费送货与退货</h3>
+                    <p>所有订单超过200免费送货。</p>
+                </div>
+            </div>
+            <div style="text-align:center;height:70px;padding-top:10px;padding-bottom:10px;" class="col-md-4">
+                <i style="font-size:36px;display:inline-block;" class="fa fa-jpy"></i>
+                <div class="text-area">
+                    <h3 style="margin:0;">退款保证</h3>
+                    <p>100%退款保证.</p>
+                </div>
+            </div>
+            <div style="text-align:center;height:70px;padding-top:10px;padding-bottom:10px;" class="col-md-4">
+                <i style="font-size:36px;display:inline-block;" class="fa fa-phone"></i>
+                <div class="text-area">
+                    <h3 style="margin:0;">在线支持 24/7</h3>
+                    <p>客服7*24小时在线.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+jQuery(function()
+{
+	$('.flexslider').flexslider(
+	{
+		animation: "slide",
+		directionNav: false,
+		animationLoop: false,
+		controlNav: false,
+		slideToStart: 0,
+		slideshow: true,
+		animationDuration: 300
+	});
+});
+</script>
