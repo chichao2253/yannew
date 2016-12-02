@@ -21,3 +21,5 @@
 <?PHP exit;?>	1480684030	admin	1	::1	founder	GET={operation=perm; }; POST={};
 <?PHP exit;?>	1480684037	admin	1	::1		GET={}; POST={};
 <?PHP exit;?>	1480684039	admin	1	::1	index	GET={}; POST={};
+<?PHP exit;?>	1480684597	admin	1	::1		GET={}; POST={};
+<?PHP exit;?>	1480684603	admin	1	::1	index	GET={}; POST={};
