@@ -67,6 +67,7 @@ class PassportAction extends CommonAction {
         D('Sms')->sendSms('sms_code', $mobile, array('code' => $randstring));
         die('1');
     }
+	
 
     public function bind() {
         $this->display();
